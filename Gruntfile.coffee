@@ -45,6 +45,10 @@ module.exports = (grunt) ->
             cwd: 'app/models'
             src: ['**/*.coffee']
             dest: 'models'
+          }, {
+            cwd: 'app/lib'
+            src: ['**/*.coffee']
+            dest: 'lib'
           }]
 
     clean:
@@ -76,12 +80,6 @@ module.exports = (grunt) ->
           }
         ]
 
-    express:
-      dev:
-        options:
-          port: 4040
-          script: 'server.js'
-
     mincss:
       dist:
         files:
@@ -94,14 +92,6 @@ module.exports = (grunt) ->
           paths: ['app/css']
         files:
           'tmp/css/app.css': 'app/css/application.styl'
-
-    mocha:
-      test:
-        src: "http://localhost:4466/index.html"
-        mocha:
-          ignoreLeaks: false
-          timeout: 20000
-        run: true
 
     uglify:
       app:
@@ -122,19 +112,17 @@ module.exports = (grunt) ->
         tasks: ['styles']
         options:
           debounceDelay: 50
-      express:
-        files: ['server.js']
-        tasks: ['express:dev']
-        options:
-          nospawn: true
       hbs:
-        files: ['app/templates/**/*.hbs']
-        tasks: ['scripts', 'concat:devJs']
+        files: [
+          'app/views/**/*.hbs'
+          'app/templates/**/*.hbs'
+        ]
+        tasks: ['browserify']
         options:
           debounceDelay: 250
       js:
         files: ['app/**/*.coffee'],
-        tasks: ['scripts', 'concat:devJs']
+        tasks: ['browserify']
         options:
           debounceDelay: 250
       livereload:

@@ -9,10 +9,10 @@
     "url": ""
   },
   "dependencies": {
-    "chaplin": "~1.0.0",
     "hbs": "~2.4.0",
     "handlebars": "~1.0.12",
     "backbone": "~1.0.0",
+    "chaplin": "~1.0.0",
     "hbsfy": "~0.1.5"
   },
   "devDependencies": {
@@ -26,6 +26,7 @@
     "browserify": "~2.35.4",
     "grunt-browserify": "~1.2.9",
     "grunt-bower-task": "~0.3.4",
-    "grunt-contrib-concat": "~0.4.0"
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1"
   }
 }

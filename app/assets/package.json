@@ -1,0 +1,21 @@
+{
+  "main": "index.html",
+  "name": "Chaplin-with-browserify-on-node-webkit",
+  "description": "",
+  "version": "0.1.0",
+  "keywords": [ "chaplin", "browserify", "grunt", "node-webkit" ],
+  "window": {
+    "title": "Chaplin with node-webkit on desktop",
+    "icon": "link.png",
+    "toolbar": false,
+    "frame": true,
+    "width": 800,
+    "height": 500,
+    "position": "mouse",
+    "min_width": 800,
+    "min_height": 600
+  },
+  "webkit": {
+    "plugin": true
+  }
+}

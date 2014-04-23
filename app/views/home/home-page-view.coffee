@@ -4,3 +4,5 @@ module.exports = class HomePageView extends View
   autoRender: true
   className: 'home-page'
   template: require './templates/home'
+  regions:
+    featureList: '#feature-list'

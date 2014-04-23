@@ -53,6 +53,10 @@ module.exports = (grunt) ->
             cwd: 'app/locale'
             src: ['**/*.js']
             dest: 'locale'
+          }, {
+            cwd: 'app/data'
+            src: ['**/*.coffee']
+            dest: 'data'
           }]
 
     clean:
@@ -95,7 +99,7 @@ module.exports = (grunt) ->
           compress: false
           paths: ['app/css']
         files:
-          'tmp/css/app.css': 'app/css/application.styl'
+          'tmp/css/app.css': 'app/views/**/*.styl'
 
     uglify:
       app:
@@ -112,8 +116,8 @@ module.exports = (grunt) ->
         options:
           debounceDelay: 50
       css:
-        files: ['app/css/**/*.styl'],
-        tasks: ['styles']
+        files: ['app/**/*.styl'],
+        tasks: ['stylus', 'concat:distCss']
         options:
           debounceDelay: 50
       hbs:
@@ -141,5 +145,5 @@ module.exports = (grunt) ->
   .sync('./node_modules/grunt-*/tasks')
   .forEach(grunt.loadTasks)
 
-  grunt.registerTask 'foo', ['clean', 'bower', 'copy', 'browserify', 'concat']
+  grunt.registerTask 'foo', ['clean', 'bower', 'copy', 'stylus', 'browserify', 'concat']
   grunt.registerTask 'default', 'foo'

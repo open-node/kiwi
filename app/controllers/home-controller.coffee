@@ -1,11 +1,20 @@
-Controller = require './base/controller'
-HeaderView = require 'views/home/header-view'
-HomePageView = require 'views/home/home-page-view'
+Controller      = require './base/controller'
+Collection      = require 'models/base/collection'
+HomePageView    = require 'views/home/home-page-view'
+FeatureListView = require 'views/home/feature-list'
+
+features        = require 'data/features'
 
 module.exports = class HomeController extends Controller
-  beforeAction: ->
+
+  reuseView: ->
     super
-    @reuse 'header', HeaderView, region: 'header'
+
+    @reuse 'homePageView', HomePageView, {region: 'main'}
 
   index: ->
-    @view = new HomePageView region: 'main'
+
+    @featureListView = new FeatureListView
+      collection: new Collection(features())
+      region: 'featureList'
+

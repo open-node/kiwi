@@ -2,6 +2,6 @@ View = require '../base/view'
 
 module.exports = class HeaderView extends View
   autoRender: true
-  className: 'header'
-  tagName: 'header'
+  className: 'container'
+  tagName: 'div'
   template: require './templates/header'

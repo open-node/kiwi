@@ -9,9 +9,9 @@
     "url": ""
   },
   "dependencies": {
+    "backbone": "~1.0.0",
     "hbs": "~2.4.0",
     "handlebars": "~1.0.12",
-    "backbone": "~1.0.0",
     "chaplin": "~1.0.0",
     "hbsfy": "~0.1.5"
   },

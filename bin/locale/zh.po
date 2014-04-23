@@ -4,5 +4,5 @@ msgstr ""
 
 #: ../app/views/home/templates/home.hbs: 4
 msgid "Chaplin with browserify on grunt"
-msgstr ""
+msgstr "Chaplin 利用 browserify 管理依赖，构建使用 grunt"
 

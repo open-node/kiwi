@@ -31,7 +31,7 @@ module.exports = (grunt) ->
         options:
           debug: true
           transform: ['coffeeify','hbsfy']
-          extensions: ['.coffee','.hbs']
+          extensions: ['.coffee','.hbs', '.js']
           insertGlobals: true
           aliasMappings: [{
             cwd: 'app/controllers'
@@ -49,6 +49,10 @@ module.exports = (grunt) ->
             cwd: 'app/lib'
             src: ['**/*.coffee']
             dest: 'lib'
+          }, {
+            cwd: 'app/locale'
+            src: ['**/*.js']
+            dest: 'locale'
           }]
 
     clean:

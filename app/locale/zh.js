@@ -1,0 +1,1 @@
+module.exports = {"zh":{"Chaplin with browserify on grunt":"Chaplin 利用 browserify 管理依赖，构建使用 grunt"}};

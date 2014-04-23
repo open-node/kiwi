@@ -1,0 +1,1 @@
+module.exports = {"en":{"Chaplin with browserify on grunt":"Chaplin with browserify on grunt"}};

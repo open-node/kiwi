@@ -4,5 +4,5 @@ msgstr ""
 
 #: ../app/views/home/templates/home.hbs: 4
 msgid "Chaplin with browserify on grunt"
-msgstr ""
+msgstr "Chaplin with browserify on grunt"
 

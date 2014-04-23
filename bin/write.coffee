@@ -11,7 +11,7 @@ po2json = (str) ->
   JSON.stringify translate
 
 write = (poFile, lang, destFile) ->
-  destFile = "../app/common/locale/#{lang}.js" if not destFile
+  destFile = "../app/locale/#{lang}.js" if not destFile
   str = fs.readFileSync(poFile).toString()
   json = po2json(str)
   fs.writeFileSync(destFile, "module.exports = {\"#{lang}\":#{json}};")

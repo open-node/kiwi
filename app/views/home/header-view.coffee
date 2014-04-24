@@ -5,3 +5,5 @@ module.exports = class HeaderView extends View
   className: 'container'
   tagName: 'div'
   template: require './templates/header'
+  regions:
+    userInfo: '#header-userinfo'

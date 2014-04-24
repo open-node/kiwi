@@ -13,7 +13,8 @@
     "hbs": "~2.4.0",
     "handlebars": "~1.0.12",
     "chaplin": "~1.0.0",
-    "hbsfy": "~0.1.5"
+    "hbsfy": "~0.1.5",
+    "MD5": "~1.2.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

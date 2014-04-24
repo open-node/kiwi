@@ -1,0 +1,17 @@
+{{#if id}}
+<ul class="nav navbar-nav navbar-right">
+  <li><img src="{{_utils 'avatar' this 52}}" /></li>
+  <li><a href="javascript:;">{{email}}</a></li>
+  <li><a href="#!/user/logout" class="btn btn-danger sign-out">{{t "退出"}}</a></li>
+</ul>
+{{else}}
+<form class="navbar-form navbar-right" role="form">
+  <div class="form-group">
+    <input type="text" name="email" placeholder="{{t "Email"}}" class="form-control">
+  </div>
+  <div class="form-group">
+    <input type="password" name="password" placeholder="{{t "Password"}}" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-success">{{t "Sign in"}}</button>
+</form>
+{{/if}}

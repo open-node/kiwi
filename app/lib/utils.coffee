@@ -1,5 +1,8 @@
 _       = require 'underscore'
 Chaplin = require 'chaplin'
+md5     = require 'MD5'
+
+
 # Application-specific utilities
 # ------------------------------
 
@@ -7,6 +10,10 @@ Chaplin = require 'chaplin'
 utils = Chaplin.utils.beget Chaplin.utils
 
 _.extend utils,
+
+  avatar: (user, size) ->
+    "http://www.gravatar.com/avatar/#{utils.md5(user.email)}?s=#{size}&d=mm"
+
   time: ->
     moment().unix()
 
@@ -32,6 +39,8 @@ _.extend utils,
     return '' if not date
     format = 'YYYY-MM-DD HH:mm:ss' if not _.isString format
     moment(date).utc().add('hours', utils.timeZone()).format format
+
+  md5: md5
 
 # Prevent creating new properties and stuff.
 Object.seal? utils

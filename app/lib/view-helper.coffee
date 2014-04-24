@@ -3,6 +3,7 @@ Handlebars = require 'handlebars-runtime'
 # Application-specific view helpers
 # http://handlebarsjs.com/#helpers
 # --------------------------------
+_     = require 'underscore'
 utils = require './utils'
 i18n  = require './i18n'
 

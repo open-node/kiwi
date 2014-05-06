@@ -27,11 +27,15 @@ module.exports = (grunt) ->
             'app/**/*.coffee'
             'app/**/*.js'
             'app/**/*.hbs'
+            # 引入kiwi的插件
+            'node_modules/kiwi-*/**/*.coffee'
+            'node_modules/kiwi-*/**/*.js'
+            'node_modules/kiwi-*/**/*.hbs'
           ]
         options:
           debug: true
-          transform: ['coffeeify','hbsfy']
-          extensions: ['.coffee','.hbs', '.js']
+          transform: ['coffeeify', 'hbsfy']
+          extensions: ['.coffee', '.hbs', '.js']
           insertGlobals: true
           aliasMappings: [{
             cwd: 'app/controllers'
@@ -124,12 +128,17 @@ module.exports = (grunt) ->
         files: [
           'app/views/**/*.hbs'
           'app/templates/**/*.hbs'
+          'node_modules/kiwi-*/**/*.hbs'
         ]
         tasks: ['browserify']
         options:
           debounceDelay: 250
       js:
-        files: ['app/**/*.coffee'],
+        files: [
+          'app/**/*.coffee'
+          'node_modules/kiwi-*/**/*.coffee'
+          'node_modules/kiwi-*/**/*.js'
+        ],
         tasks: ['browserify']
         options:
           debounceDelay: 250

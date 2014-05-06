@@ -20,7 +20,7 @@ module.exports = ->
     id: 4
     key: 'collection-view'
     name: i18n.t '列表的显示'
-    desc: i18n.t '列表的呈现一般对应的api接口也是一个列表的接口，即返回的数据是数组格式，所以只要数据是数组一定有用CollectionView去呈现它, 一定要去集成系统的collection view 基类， require("views/base/collection-view")'
+    desc: i18n.t '列表的呈现一般对应的api接口也是一个列表的接口，即返回的数据是数组格式，所以只要数据是数组一定有用CollectionView去呈现它, 一定要去继承系统的collection view 基类， require("views/base/collection-view")'
   }, {
     id: 5
     key: 'form-view'

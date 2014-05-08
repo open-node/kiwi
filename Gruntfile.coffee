@@ -59,7 +59,10 @@ module.exports = (grunt) ->
             dest: 'locale'
           }, {
             cwd: 'app/data'
-            src: ['**/*.coffee']
+            src: [
+              '**/*.coffee'
+              '**/*.js'
+            ]
             dest: 'data'
           }]
 

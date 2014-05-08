@@ -1,6 +1,7 @@
 _       = require 'underscore'
 Chaplin = require 'chaplin'
 md5     = require 'MD5'
+moment  = require 'moment'
 
 
 # Application-specific utilities

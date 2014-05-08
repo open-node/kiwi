@@ -12,7 +12,7 @@ $ ->
   # 插件初始化
   # 插件一般都是扩充原生类功能
   # 比如views/base/view、views/base/collection-view
-  plugin.init(config.plugin or [])
+  plugin.init(config.plugins or [])
 
   new Application {
     title: 'Brunch example application',

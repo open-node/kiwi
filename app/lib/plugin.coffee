@@ -8,8 +8,8 @@ classes =
   utils: require './utils'
 
 module.exports =
-  init: (config) ->
-    _.each config.plugins, (plugin) ->
+  init: (plugins) ->
+    _.each plugins, (plugin) ->
       if not _.isFunction plugin.module
         throw Error 'Plugin module must exports a function'
       plugin.module classes, plugin.options

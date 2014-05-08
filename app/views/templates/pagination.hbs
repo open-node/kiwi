@@ -1,0 +1,22 @@
+{{#if total}}
+<li class="disabled"><a href="javascript:;">{{t "Total"}}: {{total}}</a></li>
+{{#if prev}}
+<li><a href="javascript:;" data-page="{{prev}}">{{t "Prev page"}}</a></li>
+{{else}}
+<li class="disabled"><a href="javascript:;">{{t "Prev page"}}</a></li>
+{{/if}}
+{{#if first}}
+<li><a href="javascript:;" data-page="{{first}}">1...</a></li>
+{{/if}}
+{{#each pages}}
+<li{{#if_eq this compare=../page}} class="active"{{/if_eq}}><a href="javascript:;" data-page="{{this}}">{{this}}</a></li>
+{{/each}}
+{{#if last}}
+<li><a href="javascript:;" data-page="{{last}}">...{{last}}</a></li>
+{{/if}}
+{{#if next}}
+<li><a href="javascript:;" data-page="{{next}}">{{t "Next page"}}</a></li>
+{{else}}
+<li class="disabled"><a href="javascript:;">{{t "Next page"}}</a></li>
+{{/if}}
+{{/if}}

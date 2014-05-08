@@ -16,7 +16,8 @@
     "hbsfy": "~0.1.5",
     "MD5": "~1.2.1",
     "underscore": "~1.6.0",
-    "moment": "~2.6.0"
+    "moment": "~2.6.0",
+    "kiwi-pagination": "open-node/kiwi-pagination"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

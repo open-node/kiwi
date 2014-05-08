@@ -17,7 +17,7 @@ module.exports = class FeaturePaginationView extends View
     @serverPaginationView.collection.fetch()
 
     @clientPaginationView = new UserListView
-      collection: new UserCollection()
+      collection: new UserCollection(null, null, all: yes)
       region: 'clientPagination'
     @clientPaginationView.isClientPaginate = yes
-    @clientPaginationView.collection.fetch('all')
+    @clientPaginationView.collection.fetch()

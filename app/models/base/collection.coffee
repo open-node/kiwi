@@ -1,3 +1,4 @@
+_             = require 'underscore'
 Model         = require './model'
 config        = require '../../config'
 Chaplin       = require 'chaplin'
@@ -44,4 +45,4 @@ module.exports = class Collection extends Chaplin.Collection
     super
 
   opt: (options) ->
-    @options = options
+    @options = _.extend {}, options

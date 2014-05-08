@@ -5,4 +5,3 @@ module.exports = class UserListView extends CollectionView
   template: require './templates/list'
   itemView: ItemView
   listSelector: 'tbody'
-

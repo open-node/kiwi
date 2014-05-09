@@ -152,10 +152,18 @@ module.exports = (grunt) ->
           'build/**/*'
         ]
 
+    connect:
+      server:
+        options:
+          port: 8000
+          base: 'build'
+          hostname: '*'
+
   # Load installed tasks
   grunt.file.glob
   .sync('./node_modules/grunt-*/tasks')
   .forEach(grunt.loadTasks)
 
-  grunt.registerTask 'foo', ['clean', 'bower', 'copy', 'stylus', 'browserify', 'concat']
-  grunt.registerTask 'default', 'foo'
+  grunt.registerTask 'build', ['clean', 'bower', 'copy', 'stylus', 'browserify', 'concat']
+  grunt.registerTask 'watchserver', ['build', 'connect', 'watch']
+  grunt.registerTask 'default', 'build'

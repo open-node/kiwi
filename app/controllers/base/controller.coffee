@@ -9,7 +9,7 @@ module.exports = class Controller extends Chaplin.Controller
   # Reusabilities persist stuff between controllers.
   # You may also persist models etc.
   beforeAction: ->
-    config.user = new User()
+    config.user = new User() unless config.user
     @reuseView()
 
   # 重复使用view

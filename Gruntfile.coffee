@@ -34,8 +34,8 @@ module.exports = (grunt) ->
           ]
         options:
           debug: true
-          transform: ['coffeeify', 'hbsfy']
-          extensions: ['.coffee', '.hbs', '.js']
+          transform: ['coffeeify', 'hbsfy', 'ecofy']
+          extensions: ['.coffee', '.hbs', '.eco', '.js']
           insertGlobals: true
           aliasMappings: [{
             cwd: 'app/controllers'

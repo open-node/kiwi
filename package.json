@@ -13,7 +13,6 @@
     "hbs": "~2.4.0",
     "handlebars": "~1.0.12",
     "chaplin": "~1.0.0",
-    "hbsfy": "~0.1.5",
     "MD5": "~1.2.1",
     "underscore": "~1.6.0",
     "moment": "~2.6.0"
@@ -28,6 +27,8 @@
     "grunt-contrib-connect": "~0.4.x",
     "coffeeify": "~0.5.2",
     "browserify": "~2.35.4",
+    "hbsfy": "~0.1.5",
+    "ecofy": "~1.0.1"
     "grunt-browserify": "~1.2.9",
     "grunt-bower-task": "~0.3.4",
     "grunt-contrib-concat": "~0.4.0",
